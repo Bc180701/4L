@@ -1,11 +1,13 @@
 import { ArrowDown, ArrowUpRight, MapPin } from "lucide-react";
 import Photo from "@/components/ui/Photo";
+import OliveBranch from "@/components/ui/OliveBranch";
 export default function Hero() {
   return (
     <section className="hero" id="accueil">
       <div className="hero-content">
         <p className="eyebrow">
-          <span className="tiny-line" /> LE BONHEUR PREND LES PETITES ROUTES
+          <OliveBranch className="hero-olive" /> LE BONHEUR PREND LES PETITES
+          ROUTES
         </p>
         <h1>
           Votre mariage
@@ -32,6 +34,7 @@ export default function Hero() {
       <div className="hero-visual">
         <Photo
           name="hero-4l.jpg"
+          fallback="illustration-provence.png"
           alt="Une 4L bleue sur une petite route de Provence"
           priority
           sizes="(max-width: 760px) 100vw, 62vw"
@@ -42,7 +45,7 @@ export default function Hero() {
           <span>LE CHARME RESTE</span>
         </div>
         <div className="visual-note">
-          <span className="note-star">✳︎</span>
+          <OliveBranch className="note-olive" />
           <span>
             Une jolie route.
             <br />

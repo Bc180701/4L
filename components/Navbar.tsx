@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { site } from "@/config/site";
+import Brand from "@/components/ui/Brand";
 const links = [
   ["Accueil", "/"],
   ["La 4L", "/#la-4l"],
@@ -31,13 +32,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-inner">
         <Link className="brand" href="/" aria-label={`${site.name}, accueil`}>
-          <span className="brand-monogram">
-            4L<span>✳︎</span>
-          </span>
-          <span className="brand-words">
-            {site.name.replace(/^4L\s*/, "")}
-            <small>UN AIR DE PROVENCE</small>
-          </span>
+          <Brand />
         </Link>
         <nav className="desktop-nav" aria-label="Navigation principale">
           {links.map(([label, href]) => (

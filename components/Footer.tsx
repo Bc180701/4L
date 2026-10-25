@@ -3,15 +3,19 @@ import Link from "next/link";
 import { ArrowUpRight, Instagram } from "lucide-react";
 import { site } from "@/config/site";
 import { track } from "@/lib/analytics";
+import Brand from "@/components/ui/Brand";
 export default function Footer() {
   return (
     <footer>
       <div className="footer-top section">
         <div className="footer-brand">
-          <a href="/" className="footer-logo">
-            4L<span>✳︎</span>
-          </a>
-          <p className="footer-name">{site.name}</p>
+          <Link
+            href="/"
+            className="footer-logo"
+            aria-label={`${site.name}, accueil`}
+          >
+            <Brand />
+          </Link>
           <p>
             Une Renault 4L vintage
             <br />

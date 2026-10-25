@@ -10,14 +10,14 @@ export default function Image() {
         display: "flex",
         width: "100%",
         height: "100%",
-        background: "#f6f1e7",
-        color: "#50677a",
+        background: "#fffdf8",
+        color: "#243f50",
         padding: "70px",
         flexDirection: "column",
         justifyContent: "space-between",
       }}
     >
-      <div style={{ display: "flex", fontSize: 26, letterSpacing: 5 }}>
+      <div style={{ display: "flex", fontSize: 27, letterSpacing: 2 }}>
         {site.name.toUpperCase()}
       </div>
       <div
@@ -32,7 +32,7 @@ export default function Image() {
         <br />à bord d’une 4L.
       </div>
       <div style={{ display: "flex", fontSize: 24 }}>
-        1987 · Avec chauffeur · Les Alpilles
+        Voitures anciennes avec chauffeur · Provence
       </div>
     </div>,
     size,

@@ -1,5 +1,6 @@
 import { Camera, Heart, Route, CarFront } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
+import OliveBranch from "@/components/ui/OliveBranch";
 const items = [
   {
     icon: CarFront,
@@ -27,9 +28,13 @@ export default function Experience() {
     <>
       <div className="promise-strip">
         <span>Une 4L de caractère</span>
-        <span>✳︎</span>
+        <span>
+          <OliveBranch />
+        </span>
         <span>Un chauffeur attentionné</span>
-        <span>✳︎</span>
+        <span>
+          <OliveBranch />
+        </span>
         <span>Votre Provence, à votre rythme</span>
       </div>
       <section className="section experience" id="experience">

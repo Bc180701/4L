@@ -1,27 +1,29 @@
 @import "tailwindcss";
 @theme inline {
-  --color-blue: #50677a;
-  --color-cream: #f6f1e7;
+  --color-blue: #243f50;
+  --color-cream: #f5f0e6;
   --font-sans: "DM Sans", sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
 }
 :root {
-  --blue: #50677a;
-  --blue-dark: #3e5363;
-  --cream: #f6f1e7;
-  --paper: #fcfaf6;
-  --stone: #d8c8b2;
-  --olive: #7d8066;
-  --ink: #2c2c2a;
-  --muted: #686961;
-  --line: #e3ded3;
+  --blue: #243f50;
+  --blue-dark: #182f3e;
+  --gold: #b49059;
+  --gold-light: #d6bf97;
+  --cream: #f5f0e6;
+  --paper: #fffdf8;
+  --stone: #d4c3a2;
+  --olive: #777b60;
+  --ink: #243b47;
+  --muted: #686b62;
+  --line: #e5dccb;
 }
 * {
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 105px;
+  scroll-padding-top: 125px;
 }
 body {
   margin: 0;
@@ -149,7 +151,7 @@ section {
   min-height: 48px;
   padding: 14px 23px;
   border: 1px solid var(--blue);
-  border-radius: 7px;
+  border-radius: 4px;
   background: var(--blue);
   color: var(--paper);
   font-size: 12px;
@@ -196,20 +198,20 @@ section {
   top: 0;
   z-index: 40;
   width: 100%;
-  background: rgba(252, 250, 246, 0.92);
+  background: rgba(255, 253, 248, 0.93);
   transition:
     box-shadow 0.3s,
     background 0.3s;
   backdrop-filter: blur(12px);
 }
 .navbar.scrolled {
-  background: rgba(252, 250, 246, 0.97);
+  background: rgba(255, 253, 248, 0.97);
   box-shadow: 0 1px 0 var(--line);
 }
 .nav-inner {
   max-width: 1440px;
   margin: auto;
-  min-height: 96px;
+  min-height: 112px;
   padding: 0 48px;
   display: flex;
   align-items: center;
@@ -223,32 +225,7 @@ section {
   color: var(--blue);
   flex-shrink: 0;
 }
-.brand-monogram {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 43px;
-  line-height: 1;
-  letter-spacing: -3px;
-  position: relative;
-  padding-right: 9px;
-}
-.brand-monogram > span {
-  font-size: 19px;
-  position: absolute;
-  top: 0;
-  right: -5px;
-}
-.brand-words {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
-  line-height: 1.1;
-}
-.brand-words small {
-  display: block;
-  font-family: "DM Sans", sans-serif;
-  font-size: 7px;
-  letter-spacing: 2px;
-  margin-top: 7px;
-}
+
 .desktop-nav {
   display: flex;
   gap: 25px;
@@ -310,11 +287,7 @@ section {
   gap: 10px;
   margin-bottom: 27px;
 }
-.tiny-line {
-  width: 25px;
-  height: 1px;
-  background: var(--blue);
-}
+
 .hero h1 {
   max-width: 660px;
 }
@@ -365,6 +338,8 @@ section {
 }
 .hero-visual > .photo {
   border-radius: 180px 0 0 8px;
+  border-top: 1px solid var(--gold-light);
+  border-left: 1px solid var(--gold-light);
 }
 .hero-visual > .photo img {
   object-position: 55% center;
@@ -393,7 +368,7 @@ section {
   align-items: center;
   justify-content: center;
   color: var(--blue);
-  outline: 1px solid var(--stone);
+  outline: 1px solid var(--gold);
   outline-offset: -7px;
   transform: rotate(-12deg);
 }
@@ -423,9 +398,7 @@ section {
   font-size: 23px;
   line-height: 1.15;
 }
-.note-star {
-  font-size: 37px;
-}
+
 .hero-scroll {
   position: absolute;
   bottom: 31px;
@@ -443,7 +416,7 @@ section {
   justify-content: center;
   gap: 50px;
   align-items: center;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--gold-light);
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   color: var(--blue);
@@ -513,7 +486,7 @@ section {
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background: #e8ddc9;
+  background: var(--gold-light);
   color: var(--blue-dark);
   font-size: 9px;
   font-weight: 500;
@@ -685,7 +658,7 @@ section {
   font-size: 34px;
   font-style: italic;
   line-height: 1.15;
-  color: #fcfaf6;
+  color: #fffdf8;
   transform: rotate(-5deg);
   text-shadow: 0 2px 12px #3e493d99;
 }
@@ -797,7 +770,7 @@ section {
   top: 14px;
   width: 32px;
   height: 32px;
-  background: #fcfaf6dc;
+  background: #fffdf8dc;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1029,7 +1002,7 @@ section {
   max-width: 92%;
 }
 .contact-section {
-  background: #eaf0f0;
+  background: #eeeee5;
 }
 .contact-layout {
   display: grid;
@@ -1220,26 +1193,7 @@ footer {
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 50px;
 }
-.footer-logo {
-  display: inline-block;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 57px;
-  line-height: 1;
-  color: var(--blue);
-  position: relative;
-}
-.footer-logo span {
-  font-size: 22px;
-  position: absolute;
-  top: 0;
-  right: -17px;
-}
-.footer-name {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 24px;
-  color: var(--blue);
-  margin: 10px 0;
-}
+
 .footer-brand > p:last-child {
   font-size: 11px;
   line-height: 1.8;
@@ -1408,9 +1362,7 @@ footer {
   .desktop-nav {
     gap: 17px;
   }
-  .brand-words {
-    font-size: 18px;
-  }
+
   .hero {
     min-height: 755px;
     padding-left: 5%;
@@ -1693,7 +1645,7 @@ footer {
 }
 @media (max-width: 760px) {
   html {
-    scroll-padding-top: 85px;
+    scroll-padding-top: 115px;
   }
   body {
     font-size: 14px;
@@ -1703,19 +1655,11 @@ footer {
     padding: 68px 0;
   }
   .nav-inner {
-    min-height: 77px;
+    min-height: 100px;
     padding: 0 22px;
     gap: 15px;
   }
-  .brand-monogram {
-    font-size: 38px;
-  }
-  .brand-words {
-    font-size: 18px;
-  }
-  .brand-words small {
-    font-size: 6px;
-  }
+
   .nav-cta {
     display: none;
   }
@@ -1723,7 +1667,7 @@ footer {
     margin-left: auto;
   }
   .hero {
-    padding: 122px 22px 52px;
+    padding: 145px 22px 52px;
     display: block;
     min-height: 0;
   }
@@ -2125,7 +2069,7 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 45;
-    background: #fcfaf6f5;
+    background: #fffdf8f5;
     border-top: 1px solid var(--line);
     padding: 10px 20px calc(10px + env(safe-area-inset-bottom));
     backdrop-filter: blur(12px);
@@ -2245,5 +2189,231 @@ footer {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Identité La Balade des Gens Heureux : signature, olivier et filets dorés. */
+.brand-signature {
+  display: inline-flex;
+  width: 250px;
+  flex-direction: column;
+  align-items: center;
+  color: var(--blue);
+  line-height: 1;
+  text-align: center;
+}
+.brand-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+.brand-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 27px;
+  white-space: nowrap;
+  margin-top: -1px;
+  letter-spacing: -0.5px;
+}
+.brand-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 70%;
+  margin: 4px 0;
+  color: var(--gold);
+}
+.brand-rule i {
+  flex: 1;
+  height: 1px;
+  background: var(--gold-light);
+}
+.brand-rule svg {
+  width: 37px;
+  height: 14px;
+}
+.brand-tagline {
+  font-size: 6px;
+  letter-spacing: 1.65px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.brand-image {
+  width: 100%;
+  height: 92px;
+  object-fit: contain;
+}
+.hero-olive {
+  width: 43px;
+  height: 22px;
+  color: var(--gold);
+}
+.note-olive {
+  width: 65px;
+  height: 38px;
+  color: var(--gold);
+}
+.promise-strip svg {
+  width: 42px;
+  height: 22px;
+  color: var(--gold);
+}
+.eyebrow {
+  color: var(--blue);
+}
+.section-heading .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.hero-stamp strong {
+  color: var(--blue);
+}
+.price-card.featured {
+  box-shadow:
+    inset 0 0 0 5px var(--blue),
+    inset 0 0 0 6px #b4905966;
+}
+.featured .card-number {
+  color: var(--gold-light);
+}
+.featured li svg {
+  color: var(--gold-light);
+}
+.step-number {
+  color: var(--blue);
+}
+.step-number::after {
+  background: var(--gold-light);
+}
+.location-section {
+  background: #eeeee5;
+}
+.contact-section {
+  background: #f2eee4;
+  border-top: 1px solid var(--gold-light);
+}
+.contact-card {
+  border-color: #ded2bd;
+  box-shadow: 0 10px 40px #243f5005;
+}
+.contact-signature {
+  color: var(--blue);
+}
+footer {
+  border-top: 1px solid var(--gold-light);
+}
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 22px;
+}
+.footer-logo .brand-signature {
+  width: 290px;
+}
+.footer-logo .brand-title {
+  font-size: 48px;
+}
+.footer-logo .brand-subtitle {
+  font-size: 35px;
+}
+.footer-logo .brand-tagline {
+  font-size: 7px;
+}
+.footer-logo .brand-rule {
+  margin: 8px 0;
+}
+.footer-logo .brand-rule svg {
+  width: 46px;
+  height: 19px;
+}
+.footer-logo .brand-image {
+  height: 145px;
+}
+.brand-image {
+  border-radius: 0;
+}
+@media (max-width: 1150px) {
+  .brand-signature {
+    width: 220px;
+  }
+  .brand-title {
+    font-size: 33px;
+  }
+  .brand-subtitle {
+    font-size: 25px;
+  }
+  .brand-tagline {
+    font-size: 5.5px;
+    letter-spacing: 1.25px;
+  }
+  .desktop-nav {
+    gap: 18px;
+  }
+}
+@media (max-width: 760px) {
+  .brand-signature {
+    width: 220px;
+  }
+  .brand-title {
+    font-size: 33px;
+  }
+  .brand-subtitle {
+    font-size: 25px;
+  }
+  .brand-tagline {
+    font-size: 5.5px;
+    letter-spacing: 1.4px;
+  }
+  .brand-image {
+    height: 84px;
+  }
+  .hero-olive {
+    width: 34px;
+  }
+  .hero .eyebrow {
+    letter-spacing: 1.15px;
+    gap: 9px;
+  }
+  .footer-logo .brand-signature {
+    width: 260px;
+  }
+  .footer-logo .brand-title {
+    font-size: 43px;
+  }
+  .footer-logo .brand-subtitle {
+    font-size: 32px;
+  }
+  .footer-logo .brand-tagline {
+    font-size: 6px;
+  }
+  .footer-logo .brand-rule {
+    margin: 6px 0;
+  }
+  .footer-logo .brand-image {
+    height: 135px;
+  }
+}
+@media (max-width: 380px) {
+  .brand-signature {
+    width: 200px;
+  }
+  .brand-title {
+    font-size: 31px;
+  }
+  .brand-subtitle {
+    font-size: 23px;
+  }
+  .brand-tagline {
+    font-size: 5px;
+  }
+  .hero .eyebrow {
+    letter-spacing: 0.7px;
   }
 }

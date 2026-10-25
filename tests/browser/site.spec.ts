@@ -91,7 +91,7 @@ test("pages légales, métadonnées et images servies", async ({
   request,
 }) => {
   await page.goto("/");
-  await expect(page).toHaveTitle(/4L Mariage Provence/);
+  await expect(page).toHaveTitle(/La Balade des Gens Heureux/);
   await expect(page.locator("html")).toHaveAttribute("lang", "fr");
   const ld = JSON.parse(
     await page.locator('script[type="application/ld+json"]').innerText(),

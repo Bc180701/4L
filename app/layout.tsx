@@ -13,8 +13,7 @@ import Analytics from "@/components/Analytics";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url || "http://localhost:3000"),
   title: {
-    default:
-      "4L Mariage Provence | Voiture Vintage avec Chauffeur dans les Alpilles",
+    default: `${site.name} | 4L mariage en Provence avec chauffeur`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -41,7 +40,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#50677a",
+  themeColor: "#243f50",
 };
 export default function RootLayout({
   children,

@@ -1,4 +1,4 @@
-# 4L Mariages Provence
+# La Balade des Gens Heureux
 
 Site français de présentation d’une Renault 4L Clan de 1987 avec conducteur pour les mariages en Provence. Next.js App Router, TypeScript strict, React et Tailwind CSS 4. Aucun paiement, compte, calendrier automatique ni base de données.
 
@@ -121,3 +121,11 @@ Avant ouverture publique : compléter coordonnées et mentions légales, vérifi
 - `lib/` : validation, FAQ, événements et résolution des images.
 - `public/images/` : illustrations et futures photographies.
 - `tests/` : validation serveur et parcours navigateur.
+
+## Identité visuelle
+
+Marque : **La Balade des Gens Heureux**, signature « Voitures anciennes avec chauffeur ». Palette : bleu encre `#243F50`, ivoire `#FFFDF8`, doré `#B49059`, olive `#777B60`. Les dorés servent aux filets et ornements ; les textes et boutons conservent un contraste foncé sur fond clair.
+
+La signature typographique actuelle est un affichage temporaire, pas une reproduction du logo illustré final. Pour intégrer le fichier original, exporter le logo recadré (sans les grandes marges de l’aperçu), idéalement en SVG ou PNG transparent de 1200 px de large minimum, le placer dans `public/images/logo-final.png`, puis renseigner `site.brand.logoSrc` avec `/images/logo-final.png`. Le composant partagé `Brand` l’affichera dans le header et le footer. Ne pas remplacer le logo original par une reconstitution générée.
+
+L’image `public/images/illustration-provence.png` est une illustration d’ambiance générée, inspirée des couleurs du logo, et non une photographie du véhicule. Elle sert uniquement de repli pour le hero tant que `hero-4l.jpg` n’est pas fourni.

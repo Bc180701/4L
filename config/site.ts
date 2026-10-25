@@ -1,5 +1,11 @@
 export const site = {
-  name: "4L Mariages Provence",
+  name: "La Balade des Gens Heureux",
+  brand: {
+    title: "La Balade",
+    subtitle: "des Gens Heureux",
+    tagline: "Voitures anciennes avec chauffeur",
+    logoSrc: "", // Ajouter le PNG/SVG original dans public/images puis renseigner son chemin public.
+  },
   description:
     "Une Renault 4L vintage avec chauffeur pour votre mariage à Saint-Rémy-de-Provence, dans les Alpilles et en Provence. Découvrez nos formules mariage.",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "",
